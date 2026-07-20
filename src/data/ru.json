@@ -1,0 +1,20 @@
+{
+  "code": "ru",
+  "name": "Russian",
+  "native": "Русский",
+  "flag": "🇷🇺",
+  "status": "starter",
+  "variants": [{ "code": "ru-RU", "name": "Russian", "flag": "🇷🇺" }],
+  "entries": [
+    { "id": "ru-01", "original": "дурак", "phonetic": "durák (doo-RAHK)", "translation": "fool", "literal": "fool", "note": "The folk-tale classic — Ivan the Fool is Russia's favourite hero. Mild.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ru-02", "original": "балбес", "phonetic": "balbés (bal-BYES)", "translation": "goofball", "literal": "dolt", "note": "Affectionate; the name of a beloved Soviet comedy character.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "ru-03", "original": "болван", "phonetic": "bolván (bal-VAHN)", "translation": "blockhead", "literal": "wooden idol / dummy", "note": "Originally a carved idol or hat-block: solid wood, all the way through.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ru-04", "original": "лентяй", "phonetic": "lentyáy (len-TYAY)", "translation": "lazybones", "literal": "lazy one", "note": "What every Russian grandmother calls every Russian grandchild.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "ru-05", "original": "зануда", "phonetic": "zanúda (za-NOO-dah)", "translation": "bore / nag", "literal": "one who drones", "note": "The person who explains the movie during the movie.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ru-06", "original": "придурок", "phonetic": "pridúrok (pree-DOO-rok)", "translation": "halfwit", "literal": "near-fool", "note": "The prefix 'pri-' means 'somewhat' — mathematically, 0.7 of a durak.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "ru-07", "original": "идиот", "phonetic": "idiót (ee-dee-OHT)", "translation": "idiot", "literal": "idiot", "note": "Elevated by Dostoevsky to literature; still lands hard in traffic.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "ru-08", "original": "козёл", "phonetic": "kozyól (ka-ZYOL)", "translation": "jerk", "literal": "male goat", "note": "Far heavier than 'goat' suggests — serious criminal-slang baggage. Never say it lightly to a Russian man.", "category": "nuclear", "severity": 3, "variants": null },
+    { "id": "ru-09", "original": "сволочь", "phonetic": "svóloch (SVOH-loch)", "translation": "scum", "literal": "things dragged together / debris", "note": "Originally rubbish swept into a pile. Strong, theatrical, very Chekhov-when-angry.", "category": "nuclear", "severity": 3, "variants": null },
+    { "id": "ru-10", "original": "мудак", "phonetic": "mudák (moo-DAHK)", "translation": "asshole", "literal": "vulgar (from testicle)", "note": "Firmly in mat (obscene register) territory. The real deal — not for the office.", "category": "nuclear", "severity": 3, "variants": null }
+  ]
+}

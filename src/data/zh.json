@@ -1,0 +1,20 @@
+{
+  "code": "zh",
+  "name": "Chinese",
+  "native": "中文",
+  "flag": "🇨🇳",
+  "status": "starter",
+  "variants": [{ "code": "zh-CN", "name": "Mandarin", "flag": "🇨🇳" }],
+  "entries": [
+    { "id": "zh-01", "original": "笨蛋", "phonetic": "bèn dàn (bun-dahn)", "translation": "idiot", "literal": "stupid egg", "note": "Chinese insults love eggs. This is the mild, even affectionate one.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "zh-02", "original": "傻瓜", "phonetic": "shǎ guā (shah-gwah)", "translation": "silly", "literal": "silly melon", "note": "So soft that couples use it as a pet name.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "zh-03", "original": "白痴", "phonetic": "bái chī (by-chih)", "translation": "idiot", "literal": "white fool", "note": "Noticeably harsher than bèndàn; not for flirting.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "zh-04", "original": "二百五", "phonetic": "èr bǎi wǔ (ar-by-woo)", "translation": "fool", "literal": "two hundred fifty", "note": "From ancient coin strings: 500 made a unit, so 250 is half-strung — half-finished.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "zh-05", "original": "蠢货", "phonetic": "chǔn huò (chwun-hwoh)", "translation": "moron", "literal": "stupid goods", "note": "Being called defective merchandise: efficient and cutting.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "zh-06", "original": "废物", "phonetic": "fèi wù (fay-woo)", "translation": "useless person", "literal": "waste material", "note": "Strong in family arguments; gamers throw it around constantly.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "zh-07", "original": "混蛋", "phonetic": "hún dàn (hwun-dahn)", "translation": "bastard / jerk", "literal": "mixed egg", "note": "The egg escalation continues. Implies muddled, disreputable origins.", "category": "nuclear", "severity": 2, "variants": null },
+    { "id": "zh-08", "original": "王八蛋", "phonetic": "wáng bā dàn (wong-bah-dahn)", "translation": "bastard", "literal": "turtle egg", "note": "Peak egg. Turtles were linked to infidelity in old folklore — deep insult archaeology.", "category": "nuclear", "severity": 3, "variants": null },
+    { "id": "zh-09", "original": "滚开", "phonetic": "gǔn kāi (gwun-kai)", "translation": "get lost", "literal": "roll away", "note": "Vivid: you're told to physically roll out of sight. 滚 alone works too.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "zh-10", "original": "吃货", "phonetic": "chī huò (chih-hwoh)", "translation": "glutton / foodie", "literal": "eating goods", "note": "Once an insult, now a badge of honour on food blogs. Language evolves.", "category": "playful", "severity": 1, "variants": null }
+  ]
+}

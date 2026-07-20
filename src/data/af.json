@@ -1,0 +1,20 @@
+{
+  "code": "af",
+  "name": "Afrikaans",
+  "native": "Afrikaans",
+  "flag": "🇿🇦",
+  "status": "starter",
+  "variants": [{ "code": "af-ZA", "name": "South Africa", "flag": "🇿🇦" }],
+  "entries": [
+    { "id": "af-01", "original": "domkop", "phonetic": "DOM-kop", "translation": "blockhead", "literal": "dumb head", "note": "Direct descendant of the German Dummkopf, with a South African tan.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "af-02", "original": "pampoen", "phonetic": "pam-POON", "translation": "fool", "literal": "pumpkin", "note": "The Afrikaans produce aisle strikes: big, round, hollow.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "af-03", "original": "moegoe", "phonetic": "MOO-khoo", "translation": "fool / bumpkin", "literal": "fool", "note": "Township slang absorbed into general Afrikaans; gentle mockery.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "af-04", "original": "skelm", "phonetic": "SKEL-um", "translation": "rascal / sneak", "literal": "rogue", "note": "Can be affectionate ('you little skelm!') or a genuine accusation of shadiness.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "af-05", "original": "papbroek", "phonetic": "PAP-brook", "translation": "coward", "literal": "porridge-pants", "note": "Trousers full of maize porridge: zero structural integrity, like your courage.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "af-06", "original": "luigat", "phonetic": "LAY-khut", "translation": "lazybones", "literal": "lazy hole", "note": "For the friend whose weekend plans are horizontal.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "af-07", "original": "windgat", "phonetic": "VINT-khut", "translation": "show-off", "literal": "wind hole", "note": "Someone powered entirely by their own hot air.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "af-08", "original": "bliksem", "phonetic": "BLIK-sem", "translation": "rascal / damn", "literal": "lightning", "note": "Noun, verb, and exclamation: 'Ek sal jou bliksem' = I'll wallop you. Weather as a weapon.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "af-09", "original": "jou gat", "phonetic": "yoh KHUT", "translation": "no way / your foot", "literal": "your backside", "note": "The standard scoff at nonsense claims. Braai-side essential.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "af-10", "original": "gaan bars", "phonetic": "khan BARS", "translation": "get lost", "literal": "go burst", "note": "You are instructed to explode, elsewhere. Vivid and final.", "category": "frustration", "severity": 2, "variants": null }
+  ]
+}

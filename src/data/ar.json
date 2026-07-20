@@ -1,0 +1,24 @@
+{
+  "code": "ar",
+  "name": "Arabic",
+  "native": "العربية",
+  "flag": "🇪🇬",
+  "status": "starter",
+  "note": "There is no single spoken Arabic. The most useful varieties for learners: Egyptian (most widely understood thanks to film and TV), Levantine (Syria, Lebanon, Jordan, Palestine), then Gulf and Maghrebi. Nobody insults anyone in Modern Standard Arabic.",
+  "variants": [
+    { "code": "ar-EG", "name": "Egyptian", "flag": "🇪🇬" },
+    { "code": "ar-LEV", "name": "Levantine", "flag": "🇱🇧" }
+  ],
+  "entries": [
+    { "id": "ar-01", "original": "يا غبي", "phonetic": "ya ghabi (yah GHA-bee)", "translation": "you idiot", "literal": "O stupid one", "note": "The 'ya' vocative starts most Arabic insults — you announce your target formally.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ar-02", "original": "يا أهبل", "phonetic": "ya ahbal (yah AH-bal)", "translation": "you fool", "literal": "O simpleton", "note": "Everyday and mostly harmless between friends.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ar-03", "original": "يا بليد", "phonetic": "ya balid (yah bah-LEED)", "translation": "you dimwit", "literal": "O dull one", "note": "For slow replies in the group chat.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ar-04", "original": "يا حمار", "phonetic": "ya humar (yah hoo-MAR)", "translation": "you donkey", "literal": "O donkey", "note": "The classic across the whole Arab world. The donkey carries civilisation and its insults.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "ar-05", "original": "يا فاشل", "phonetic": "ya fashil (yah FAA-shil)", "translation": "you failure", "literal": "O failing one", "note": "Stings precisely because parents use it. Deploy carefully.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "ar-06", "original": "يا زفت", "phonetic": "ya zift (yah ZIFT)", "translation": "you're awful", "literal": "O tar/asphalt", "note": "Egyptian: anything bad is 'zift' — the weather, the traffic, your cousin.", "category": "frustration", "severity": 1, "variants": ["ar-EG"] },
+    { "id": "ar-07", "original": "روح بلّط البحر", "phonetic": "ruh ballat il-bahr (roo bal-LAT el-BAHR)", "translation": "get lost", "literal": "go tile the sea", "note": "Egyptian masterpiece: go do something impossible, far away from me.", "category": "playful", "severity": 1, "variants": ["ar-EG"] },
+    { "id": "ar-08", "original": "خرا", "phonetic": "khara (KHA-rah)", "translation": "shit", "literal": "excrement", "note": "Pan-Arab frustration fuel. 'Yom khara' = a shit day.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "ar-09", "original": "يا كلب", "phonetic": "ya kalb (yah KELB)", "translation": "you dog", "literal": "O dog", "note": "Much heavier in Arabic than English — dogs rank low in traditional insult hierarchy. Fight-adjacent.", "category": "nuclear", "severity": 3, "variants": null },
+    { "id": "ar-10", "original": "كل خرا", "phonetic": "kol khara (kol KHA-rah)", "translation": "eat shit", "literal": "eat excrement", "note": "Levantine favourite for ending negotiations permanently.", "category": "nuclear", "severity": 3, "variants": ["ar-LEV"] }
+  ]
+}

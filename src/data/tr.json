@@ -1,0 +1,20 @@
+{
+  "code": "tr",
+  "name": "Turkish",
+  "native": "Türkçe",
+  "flag": "🇹🇷",
+  "status": "starter",
+  "variants": [{ "code": "tr-TR", "name": "Turkish", "flag": "🇹🇷" }],
+  "entries": [
+    { "id": "tr-01", "original": "aptal", "phonetic": "ap-TAHL", "translation": "idiot", "literal": "idiot", "note": "The everyday baseline; safe among friends.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "tr-02", "original": "salak", "phonetic": "sah-LAHK", "translation": "fool", "literal": "fool", "note": "Aptal's twin; Turks debate which is worse. Neither, really.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "tr-03", "original": "gerizekalı", "phonetic": "geh-ree-zeh-kah-LUH", "translation": "moron", "literal": "backward-minded", "note": "Longer word, stronger sting.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "tr-04", "original": "mal", "phonetic": "mahl", "translation": "dimwit", "literal": "goods / livestock", "note": "Being called merchandise: brutally efficient Turkish economy of words.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "tr-05", "original": "öküz", "phonetic": "er-KUUZ", "translation": "oaf", "literal": "ox", "note": "For clumsy, graceless behaviour. The ox files a complaint.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "tr-06", "original": "hıyar", "phonetic": "huh-YAR", "translation": "jerk", "literal": "cucumber", "note": "Turkey insults you with salad ingredients. See also: kabak (zucchini).", "category": "banter", "severity": 2, "variants": null },
+    { "id": "tr-07", "original": "dangalak", "phonetic": "dahn-gah-LAHK", "translation": "blockhead", "literal": "blockhead", "note": "Wonderfully percussive to shout. Try it: dan-ga-lak.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "tr-08", "original": "beyinsiz", "phonetic": "beh-yeen-SEEZ", "translation": "brainless", "literal": "without brain", "note": "The suffix -siz (without) makes Turkish insults modular. Attach to anything.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "tr-09", "original": "hadi oradan", "phonetic": "HAH-dee oh-rah-DAHN", "translation": "get out of here", "literal": "come on, from there", "note": "Disbelief and dismissal in one gesture-heavy package.", "category": "frustration", "severity": 1, "variants": null },
+    { "id": "tr-10", "original": "kıl", "phonetic": "kuhl", "translation": "irritating", "literal": "body hair", "note": "'Kıl herif' = an irritating guy. Precisely as itchy as it sounds.", "category": "banter", "severity": 1, "variants": null }
+  ]
+}

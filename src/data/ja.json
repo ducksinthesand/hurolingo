@@ -1,0 +1,20 @@
+{
+  "code": "ja",
+  "name": "Japanese",
+  "native": "日本語",
+  "flag": "🇯🇵",
+  "status": "starter",
+  "variants": [{ "code": "ja-JP", "name": "Japanese", "flag": "🇯🇵" }],
+  "entries": [
+    { "id": "ja-01", "original": "ばか", "phonetic": "baka (BAH-kah)", "translation": "idiot", "literal": "possibly 'horse-deer' (馬鹿)", "note": "The world's most famous Japanese insult. Mild in Tokyo, harsher in Osaka.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ja-02", "original": "あほ", "phonetic": "aho (AH-hoh)", "translation": "fool", "literal": "fool", "note": "The Kansai counterpart: affectionate in Osaka, ruder in Tokyo. Exact mirror of baka.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ja-03", "original": "まぬけ", "phonetic": "manuke (mah-NOO-keh)", "translation": "dimwit", "literal": "missing a beat (間抜け)", "note": "From music/theatre: someone whose timing in life is simply off.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "ja-04", "original": "ぼけ", "phonetic": "boke (BOH-keh)", "translation": "space cadet", "literal": "blurred / fuzzy", "note": "Also the 'funny man' role in manzai comedy duos — the airhead half.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "ja-05", "original": "くそ", "phonetic": "kuso (koo-soh)", "translation": "damn / crap", "literal": "excrement", "note": "The all-purpose gamer grunt. Attach to anything: kuso-game = bad game.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "ja-06", "original": "だまれ", "phonetic": "damare (dah-mah-reh)", "translation": "shut up", "literal": "be silent (imperative)", "note": "Anime taught the world this one. Rude in real offices.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "ja-07", "original": "へたくそ", "phonetic": "hetakuso (heh-tah-koo-soh)", "translation": "terrible at it", "literal": "unskilled + crap", "note": "The standard judgement of someone's parking, gaming, or karaoke.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "ja-08", "original": "けち", "phonetic": "kechi (KEH-chee)", "translation": "cheapskate", "literal": "stingy", "note": "For the colleague who calculates their share of lunch to the yen.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "ja-09", "original": "なまけもの", "phonetic": "namakemono (nah-mah-keh-moh-noh)", "translation": "lazybones", "literal": "lazy thing", "note": "Also the Japanese word for 'sloth' (the animal). Nature agrees.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "ja-10", "original": "うざい", "phonetic": "uzai (oo-zye)", "translation": "annoying", "literal": "from uzattai", "note": "Teen slang staple. One word, maximum eye-roll.", "category": "banter", "severity": 1, "variants": null }
+  ]
+}

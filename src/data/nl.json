@@ -1,0 +1,20 @@
+{
+  "code": "nl",
+  "name": "Dutch",
+  "native": "Nederlands",
+  "flag": "🇳🇱",
+  "status": "starter",
+  "variants": [{ "code": "nl-NL", "name": "Netherlands", "flag": "🇳🇱" }],
+  "entries": [
+    { "id": "nl-01", "original": "sukkel", "phonetic": "SUK-kel", "translation": "loser / dope", "literal": "one who trudges", "note": "The Netherlands' default mild insult. Almost cosy.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "nl-02", "original": "oen", "phonetic": "oon", "translation": "dope", "literal": "possibly from 'hoen' (fowl)", "note": "Three letters of pure Dutch efficiency.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "nl-03", "original": "mafkees", "phonetic": "MAF-case", "translation": "weirdo", "literal": "crazy Kees (a first name)", "note": "Poor Kees — the Dutch Miesepeter. A whole name sacrificed.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "nl-04", "original": "droeftoeter", "phonetic": "DROOF-too-ter", "translation": "sad sack", "literal": "sad horn", "note": "A horn that plays only sad notes. Devastating and adorable.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "nl-05", "original": "kletskous", "phonetic": "KLETS-kows", "translation": "chatterbox", "literal": "chatter-stocking", "note": "Why a stocking? Unclear. The Dutch have moved on; so should you.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "nl-06", "original": "luiwammes", "phonetic": "LOWY-wham-mes", "translation": "lazybones", "literal": "lazy jacket", "note": "A garment so lazy it became a person.", "category": "playful", "severity": 1, "variants": null },
+    { "id": "nl-07", "original": "zeikerd", "phonetic": "ZAY-kert", "translation": "whiner", "literal": "pisser", "note": "From 'zeiken' (to piss / to nag). For professional complainers.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "nl-08", "original": "eikel", "phonetic": "EYE-kel", "translation": "jerk", "literal": "acorn / glans", "note": "Botanically an acorn, anatomically not. Handle with a grin.", "category": "banter", "severity": 2, "variants": null },
+    { "id": "nl-09", "original": "rot op", "phonetic": "rot OP", "translation": "get lost", "literal": "rot away", "note": "Direct, like most things Dutch.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "nl-10", "original": "klootzak", "phonetic": "KLOHT-zak", "translation": "asshole", "literal": "ball sack", "note": "The serious one. Famous enough that foreigners learn it first — don't lead with it.", "category": "nuclear", "severity": 3, "variants": null }
+  ]
+}

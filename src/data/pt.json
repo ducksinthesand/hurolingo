@@ -1,0 +1,23 @@
+{
+  "code": "pt",
+  "name": "Portuguese",
+  "native": "Português",
+  "flag": "🇵🇹",
+  "status": "starter",
+  "variants": [
+    { "code": "pt-PT", "name": "Portugal", "flag": "🇵🇹" },
+    { "code": "pt-BR", "name": "Brazil", "flag": "🇧🇷" }
+  ],
+  "entries": [
+    { "id": "pt-01", "original": "parvo", "phonetic": "PAR-voo", "translation": "fool", "literal": "small / foolish", "note": "Portugal's everyday fool; mild enough for the dinner table.", "category": "banter", "severity": 1, "variants": ["pt-PT"] },
+    { "id": "pt-02", "original": "palerma", "phonetic": "pah-LAIR-mah", "translation": "dimwit", "literal": "dimwit", "note": "Classic Portuguese; often paired with a slow, sad head-shake.", "category": "banter", "severity": 1, "variants": ["pt-PT"] },
+    { "id": "pt-03", "original": "chato", "phonetic": "SHAH-too", "translation": "annoying", "literal": "flat", "note": "Both countries agree: a chato flattens the mood of any room.", "category": "banter", "severity": 1, "variants": null },
+    { "id": "pt-04", "original": "vai à fava", "phonetic": "vy ah FAH-vah", "translation": "get lost", "literal": "go to the fava bean", "note": "Historic: voting was once done with fava beans. Now it means 'shoo'.", "category": "playful", "severity": 1, "variants": ["pt-PT"] },
+    { "id": "pt-05", "original": "otário", "phonetic": "oh-TAH-ree-oo", "translation": "sucker", "literal": "sucker", "note": "Brazil's word for someone who falls for everything.", "category": "banter", "severity": 2, "variants": ["pt-BR"] },
+    { "id": "pt-06", "original": "babaca", "phonetic": "bah-BAH-kah", "translation": "jerk", "literal": "fool", "note": "Everyday Brazilian; the standard rating for bad drivers.", "category": "frustration", "severity": 2, "variants": ["pt-BR"] },
+    { "id": "pt-07", "original": "merda", "phonetic": "MAIR-dah", "translation": "shit", "literal": "shit", "note": "Universal Portuguese; also 'muita merda!' means 'break a leg' in theatre.", "category": "frustration", "severity": 2, "variants": null },
+    { "id": "pt-08", "original": "porra", "phonetic": "POH-hah", "translation": "damn", "literal": "vulgar: semen / old word for club", "note": "Brazil's comma. Punctuates surprise, anger, and football matches.", "category": "frustration", "severity": 3, "variants": ["pt-BR"] },
+    { "id": "pt-09", "original": "caralho", "phonetic": "kah-RAH-lyoo", "translation": "damn / fuck", "literal": "vulgar: penis; also a ship's crow's nest", "note": "Legend says sailors were sent 'to the caralho' (crow's nest) as punishment.", "category": "nuclear", "severity": 3, "variants": null },
+    { "id": "pt-10", "original": "filho da puta", "phonetic": "FEE-lyoo dah POO-tah", "translation": "son of a bitch", "literal": "son of a whore", "note": "Maximum strength in both countries. Not for karaoke night.", "category": "nuclear", "severity": 3, "variants": null }
+  ]
+}

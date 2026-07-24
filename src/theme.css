@@ -104,19 +104,47 @@ body {
 }
 .variant-chip.active { border-color: var(--purple); background: #f3e8ff; }
 
-/* ---------- path ---------- */
-.path { position: relative; padding: 8px 0 20px; }
-.unit-label {
-  text-align: center; font-weight: 900; color: #fff; border-radius: 14px;
-  padding: 10px; margin: 18px 0 10px; box-shadow: var(--shadow);
+/* ---------- topic cards (path) ---------- */
+.topic-list { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
+.topic-card {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow);
 }
-.node-row { display: flex; justify-content: center; padding: 7px 0; }
+.topic-header {
+  width: 100%; border: none; cursor: pointer; font-family: var(--font);
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; color: #fff;
+  transition: opacity 0.1s ease;
+}
+.topic-header:active { opacity: 0.85; }
+.topic-emoji { font-size: 28px; flex-shrink: 0; }
+.topic-info { flex: 1; text-align: left; }
+.topic-name { display: block; font-size: 16px; font-weight: 900; }
+.topic-desc { display: block; font-size: 11px; font-weight: 700; opacity: 0.88; margin-top: 2px; }
+.topic-progress {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 13px; font-weight: 900; flex-shrink: 0;
+}
+.topic-chevron { font-size: 10px; opacity: 0.8; }
+
+.mini-path {
+  background: var(--card); padding: 16px 12px 12px;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+}
+.mini-node-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 5px 0;
+}
+.mini-node-label { font-size: 12px; font-weight: 800; color: var(--muted); }
+
+/* shared node styles (used in mini-path) */
 .node {
-  width: 72px; height: 72px; border-radius: 50%; border: none; cursor: pointer;
-  font-size: 28px; font-family: var(--font); font-weight: 900;
+  width: 64px; height: 64px; border-radius: 50%; border: none; cursor: pointer;
+  font-size: 24px; font-family: var(--font); font-weight: 900;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 6px 0 rgba(46,16,101,0.18);
   transition: transform 0.08s ease;
+  flex-shrink: 0;
 }
 .node:active { transform: scale(0.94); }
 .node.done { background: linear-gradient(160deg, var(--green), var(--teal)); }

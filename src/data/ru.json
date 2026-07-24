@@ -4,6 +4,7 @@
   "native": "Русский",
   "flag": "🇷🇺",
   "status": "starter",
+  "note": "TODO: many learners cannot read Cyrillic script. We need a way to let users toggle a \"phonetics-only\" mode so they can learn the sounds and pronunciation of these insults without needing to read Russian letters. All entries already include romanised phonetics — this is a display/UX feature to implement.",
   "variants": [{ "code": "ru-RU", "name": "Russian", "flag": "🇷🇺" }],
   "entries": [
     { "id": "ru-01", "original": "дурак", "phonetic": "durák (doo-RAHK)", "translation": "fool", "literal": "fool", "note": "The folk-tale classic — Ivan the Fool is Russia's favourite hero. Mild.", "category": "banter", "severity": 1, "variants": null },

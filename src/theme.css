@@ -208,6 +208,20 @@ body {
 .navbtn span { display: block; font-size: 10px; font-weight: 900; }
 .navbtn.active { background: #f3e8ff; color: var(--purple); }
 
+/* ---------- language switcher (profile) ---------- */
+.lang-switcher {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.lang-chip {
+  display: flex; flex-direction: column; align-items: center;
+  background: #fff; border: 2px solid #ede9fe; border-radius: 14px;
+  padding: 10px 4px; font-family: var(--font); font-weight: 800;
+  cursor: pointer; color: var(--ink);
+  transition: transform 0.06s ease;
+}
+.lang-chip:active { transform: scale(0.94); }
+.lang-chip.active { border-color: var(--purple); background: #f3e8ff; }
+
 /* ---------- misc ---------- */
 .severity { font-size: 11px; font-weight: 900; border-radius: 999px; padding: 2px 9px; display: inline-block; }
 .severity.s1 { background: #dcfce7; color: #166534; }

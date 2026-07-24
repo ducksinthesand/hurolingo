@@ -2,7 +2,7 @@
 // App configuration — change the name here and it updates everywhere.
 // ---------------------------------------------------------------
 export const APP_NAME = 'Hurolingo'
-export const APP_TAGLINE = 'Learn to lose friends in 12 languages'
+export const APP_TAGLINE = 'Learn to lose friends in 8 languages'
 
 // AdSense: paste your publisher ID here once your account is approved,
 // then uncomment the script tag in index.html.

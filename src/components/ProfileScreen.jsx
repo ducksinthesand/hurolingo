@@ -2,7 +2,7 @@ import { levelProgress, BADGES } from '../lib/store.js'
 import { LANGUAGES } from '../data/index.js'
 import AdSlot from './AdSlot.jsx'
 
-export default function ProfileScreen({ progress }) {
+export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
   const { level, pct, toNext } = levelProgress(progress.xp)
   const lessons = Object.keys(progress.lessonsDone).length
 
@@ -22,6 +22,25 @@ export default function ProfileScreen({ progress }) {
         <div className="card"><div className="val">{lessons}</div><div className="sub">lessons</div></div>
         <div className="card"><div className="val">{progress.perfectCount}</div><div className="sub">perfects</div></div>
         <div className="card"><div className="val">{progress.languagesTried.length}</div><div className="sub">languages</div></div>
+      </div>
+
+      <h2 className="h2">Active language</h2>
+      <div className="card">
+        <p className="sub" style={{ marginBottom: 10 }}>
+          Currently learning: <strong>{currentLang ? `${currentLang.flag} ${currentLang.name}` : '—'}</strong>
+        </p>
+        <div className="lang-switcher">
+          {LANGUAGES.map((l) => (
+            <button
+              key={l.code}
+              className={`lang-chip ${currentLang && l.code === currentLang.code ? 'active' : ''}`}
+              onClick={() => onChangeLang(l)}
+            >
+              <span style={{ fontSize: 22 }}>{l.flag}</span>
+              <span style={{ fontSize: 12, marginTop: 2 }}>{l.name}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       <h2 className="h2">Badges</h2>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { APP_NAME, XP_PER_CORRECT, XP_PERFECT_BONUS } from './config.js'
 import { loadProgress, saveProgress, evaluateBadges, levelProgress, BADGES } from './lib/store.js'
 import { lessonKey } from './lib/lessons.js'
+import { getLanguage } from './data/index.js'
 import LanguagePicker from './components/LanguagePicker.jsx'
 import PathScreen from './components/PathScreen.jsx'
 import LessonScreen from './components/LessonScreen.jsx'
@@ -10,12 +11,17 @@ import ProfileScreen from './components/ProfileScreen.jsx'
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress)
-  const [view, setView] = useState('home')       // home | path | lesson | results | profile
-  const [lang, setLang] = useState(null)
-  const [session, setSession] = useState(null)   // { lang, variant, unit, lessonIndex, lesson, key }
+  const [view, setView] = useState('path')            // default to path (German)
+  const [lang, setLang] = useState(() => getLanguage('de'))  // German default
+  const [session, setSession] = useState(null)        // { lang, variant, unit, lessonIndex, lesson, key }
   const [lastResult, setLastResult] = useState(null)
 
   function update(p) { setProgress(p); saveProgress(p) }
+
+  function pickLanguage(l) {
+    setLang(l)
+    setView('path')
+  }
 
   function finishLesson(result) {
     const xpGained = result.correct * XP_PER_CORRECT + (result.wrong === 0 ? XP_PERFECT_BONUS : 0)
@@ -55,7 +61,7 @@ export default function App() {
       )}
 
       {view === 'home' && (
-        <LanguagePicker onPick={(l) => { setLang(l); setView('path') }} />
+        <LanguagePicker onPick={pickLanguage} />
       )}
 
       {view === 'path' && lang && (
@@ -75,7 +81,13 @@ export default function App() {
           onContinue={() => setView('path')} />
       )}
 
-      {view === 'profile' && <ProfileScreen progress={progress} />}
+      {view === 'profile' && (
+        <ProfileScreen
+          progress={progress}
+          currentLang={lang}
+          onChangeLang={pickLanguage}
+        />
+      )}
 
       {view !== 'lesson' && view !== 'results' && (
         <nav className="bottomnav">

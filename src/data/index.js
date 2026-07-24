@@ -3,15 +3,11 @@ import en from './en.json'
 import fr from './fr.json'
 import es from './es.json'
 import pt from './pt.json'
-import zh from './zh.json'
-import ja from './ja.json'
-import ar from './ar.json'
 import tr from './tr.json'
 import nl from './nl.json'
-import af from './af.json'
 import ru from './ru.json'
 
-export const LANGUAGES = [de, en, fr, es, pt, zh, ja, ar, tr, nl, af, ru]
+export const LANGUAGES = [de, en, fr, es, pt, tr, nl, ru]
 
 // The 5 categories, in path order (mild → nuclear)
 export const CATEGORIES = [

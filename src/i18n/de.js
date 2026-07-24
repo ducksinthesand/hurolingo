@@ -13,6 +13,40 @@ export default {
   starter_tag: 'STARTER-PAKET',
   insults_count: (n) => `${n} Beleidigungen`,
 
+  // Language names (as shown on cards)
+  lang_de: 'Deutsch',
+  lang_en: 'Englisch',
+  lang_fr: 'Französisch',
+  lang_es: 'Spanisch',
+  lang_pt: 'Portugiesisch',
+  lang_tr: 'Türkisch',
+  lang_nl: 'Niederländisch',
+  lang_ru: 'Russisch',
+
+  // Category names and descriptions (used on topic cards)
+  categories: {
+    playful: {
+      name: 'Verspielt & Albern',
+      desc: 'Harmloses Necken — für fast jeden geeignet',
+    },
+    public: {
+      name: 'Salonfähig',
+      desc: 'Mild genug fürs Büro und für Oma',
+    },
+    banter: {
+      name: 'Unter Freunden',
+      desc: 'Für Leute, die lachen — nicht klagen',
+    },
+    frustration: {
+      name: 'Alltäglicher Frust',
+      desc: 'Stau, Zehenstoß, Montage',
+    },
+    nuclear: {
+      name: 'Volle Breitseite',
+      desc: 'Explizit. Kennen — zweimal überlegen bevor du sie benutzt',
+    },
+  },
+
   // Path screen
   back_all_languages: '← Alle Sprachen',
 
@@ -36,6 +70,19 @@ export default {
   result_correct: 'richtig',
   result_new_badge: 'Neues Abzeichen!',
   result_new_badges: 'Neue Abzeichen!',
+
+  // Badge labels
+  badges: {
+    'first-lesson':  'Erste Beleidigung',
+    'ten-lessons':   '10 Lektionen',
+    'xp-500':        '500 XP',
+    'xp-2000':       '2000 XP',
+    'perfect':       'Perfekte Lektion',
+    'perfect-10':    '10 Perfekte',
+    'trilingual':    '3 Sprachen',
+    'polyglot':      'Polyglott (6)',
+    'nuclear':       'Volle Breitseite',
+  },
 
   // Profile screen
   profile_heading: 'Dein Beleidigungslebenslauf 📜',

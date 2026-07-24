@@ -3,9 +3,23 @@ import { LANGUAGES } from '../data/index.js'
 import { t } from '../i18n/index.js'
 import AdSlot from './AdSlot.jsx'
 
+const LANG_NAME_KEY = {
+  de: 'lang_de', en: 'lang_en', fr: 'lang_fr', es: 'lang_es',
+  pt: 'lang_pt', tr: 'lang_tr', nl: 'lang_nl', ru: 'lang_ru',
+}
+
+function langDisplayName(lang) {
+  const key = LANG_NAME_KEY[lang.code]
+  return key && t[key] ? t[key] : lang.name
+}
+
 export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
   const { level, pct, toNext } = levelProgress(progress.xp)
   const lessons = Object.keys(progress.lessonsDone).length
+
+  const activeName = currentLang
+    ? `${currentLang.flag} ${langDisplayName(currentLang)}`
+    : '—'
 
   return (
     <div>
@@ -28,7 +42,7 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
       <h2 className="h2">{t.profile_active_lang}</h2>
       <div className="card">
         <p className="sub" style={{ marginBottom: 10 }}>
-          {t.profile_active_lang_sub(currentLang ? `${currentLang.flag} ${currentLang.name}` : '—')}
+          {t.profile_active_lang_sub(activeName)}
         </p>
         <div className="lang-switcher">
           {LANGUAGES.map((l) => (
@@ -38,7 +52,7 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
               onClick={() => onChangeLang(l)}
             >
               <span style={{ fontSize: 22 }}>{l.flag}</span>
-              <span style={{ fontSize: 12, marginTop: 2 }}>{l.name}</span>
+              <span style={{ fontSize: 12, marginTop: 2 }}>{langDisplayName(l)}</span>
             </button>
           ))}
         </div>
@@ -60,7 +74,7 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
           ? <span className="sub">{t.profile_no_langs}</span>
           : progress.languagesTried.map((code) => {
               const l = LANGUAGES.find((x) => x.code === code)
-              return l ? <span key={code} style={{ fontSize: 28, marginRight: 8 }} title={l.name}>{l.flag}</span> : null
+              return l ? <span key={code} style={{ fontSize: 28, marginRight: 8 }} title={langDisplayName(l)}>{l.flag}</span> : null
             })}
       </div>
 

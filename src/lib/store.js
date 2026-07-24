@@ -1,5 +1,7 @@
 // localStorage-backed progress store. No accounts, no backend — v1 keeps
 // everything on-device (matches the offline PWA requirement).
+import { t } from '../i18n/index.js'
+
 const KEY = 'hurolingo-progress-v1'
 
 const DEFAULT = {
@@ -41,15 +43,15 @@ export function levelProgress(xp) {
 }
 
 export const BADGES = [
-  { id: 'first-lesson', icon: '🐣', label: 'First Insult', test: (p) => Object.keys(p.lessonsDone).length >= 1 },
-  { id: 'ten-lessons', icon: '📚', label: '10 Lessons', test: (p) => Object.keys(p.lessonsDone).length >= 10 },
-  { id: 'xp-500', icon: '⚡', label: '500 XP', test: (p) => p.xp >= 500 },
-  { id: 'xp-2000', icon: '🔥', label: '2000 XP', test: (p) => p.xp >= 2000 },
-  { id: 'perfect', icon: '🎯', label: 'Perfect Lesson', test: (p) => p.perfectCount >= 1 },
-  { id: 'perfect-10', icon: '💎', label: '10 Perfects', test: (p) => p.perfectCount >= 10 },
-  { id: 'trilingual', icon: '🌍', label: '3 Languages', test: (p) => p.languagesTried.length >= 3 },
-  { id: 'polyglot', icon: '🧠', label: 'Polyglot (6)', test: (p) => p.languagesTried.length >= 6 },
-  { id: 'nuclear', icon: '☢️', label: 'Went Nuclear', test: (p) => p.categoriesFinished.some((c) => c.endsWith('|nuclear')) }
+  { id: 'first-lesson', icon: '🐣', get label() { return t.badges['first-lesson'] }, test: (p) => Object.keys(p.lessonsDone).length >= 1 },
+  { id: 'ten-lessons',  icon: '📚', get label() { return t.badges['ten-lessons'] },  test: (p) => Object.keys(p.lessonsDone).length >= 10 },
+  { id: 'xp-500',       icon: '⚡', get label() { return t.badges['xp-500'] },       test: (p) => p.xp >= 500 },
+  { id: 'xp-2000',      icon: '🔥', get label() { return t.badges['xp-2000'] },      test: (p) => p.xp >= 2000 },
+  { id: 'perfect',      icon: '🎯', get label() { return t.badges['perfect'] },      test: (p) => p.perfectCount >= 1 },
+  { id: 'perfect-10',   icon: '💎', get label() { return t.badges['perfect-10'] },   test: (p) => p.perfectCount >= 10 },
+  { id: 'trilingual',   icon: '🌍', get label() { return t.badges['trilingual'] },   test: (p) => p.languagesTried.length >= 3 },
+  { id: 'polyglot',     icon: '🧠', get label() { return t.badges['polyglot'] },     test: (p) => p.languagesTried.length >= 6 },
+  { id: 'nuclear',      icon: '☢️', get label() { return t.badges['nuclear'] },      test: (p) => p.categoriesFinished.some((c) => c.endsWith('|nuclear')) }
 ]
 
 export function evaluateBadges(p) {

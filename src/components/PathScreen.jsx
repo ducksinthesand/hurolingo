@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react'
 import { buildPath, lessonKey } from '../lib/lessons.js'
+import { t } from '../i18n/index.js'
 import AdSlot from './AdSlot.jsx'
 
 export default function PathScreen({ lang, progress, onStartLesson, onBack }) {
   const [variant, setVariant] = useState(lang.variants[0].code)
-  const [openCat, setOpenCat] = useState(null) // category id currently expanded
+  const [openCat, setOpenCat] = useState(null)
   const units = useMemo(() => buildPath(lang, variant), [lang, variant])
 
   function toggleCat(catId) {
@@ -13,7 +14,7 @@ export default function PathScreen({ lang, progress, onStartLesson, onBack }) {
 
   return (
     <div>
-      <button className="backlink" onClick={onBack}>← All languages</button>
+      <button className="backlink" onClick={onBack}>{t.back_all_languages}</button>
       <h1 className="h1">{lang.flag} {lang.name}</h1>
       {lang.note && <p className="sub" style={{ marginBottom: 6 }}>{lang.note}</p>}
 
@@ -40,7 +41,6 @@ export default function PathScreen({ lang, progress, onStartLesson, onBack }) {
 
           return (
             <div key={unit.category.id} className={`topic-card ${isOpen ? 'open' : ''}`}>
-              {/* Category header — always visible, always tappable */}
               <button
                 className="topic-header"
                 onClick={() => toggleCat(unit.category.id)}
@@ -57,13 +57,11 @@ export default function PathScreen({ lang, progress, onStartLesson, onBack }) {
                 </span>
               </button>
 
-              {/* Mini-path — shown only when expanded */}
               {isOpen && (
                 <div className="mini-path">
                   {unit.lessons.map((lesson, i) => {
                     const key = lessonKey(lang.code, variant, unit.category.id, i)
                     const done = !!progress.lessonsDone[key]
-                    // within a category, lessons unlock sequentially
                     const unlocked = i === 0 || !!progress.lessonsDone[
                       lessonKey(lang.code, variant, unit.category.id, i - 1)
                     ]
@@ -77,7 +75,7 @@ export default function PathScreen({ lang, progress, onStartLesson, onBack }) {
                         >
                           {done ? '⭐' : unlocked ? '▶' : '🔒'}
                         </button>
-                        <span className="mini-node-label">Lesson {i + 1}</span>
+                        <span className="mini-node-label">Lektion {i + 1}</span>
                       </div>
                     )
                   })}

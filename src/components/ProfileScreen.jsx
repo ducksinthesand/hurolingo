@@ -1,5 +1,6 @@
 import { levelProgress, BADGES } from '../lib/store.js'
 import { LANGUAGES } from '../data/index.js'
+import { t } from '../i18n/index.js'
 import AdSlot from './AdSlot.jsx'
 
 export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
@@ -8,26 +9,26 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
 
   return (
     <div>
-      <h1 className="h1">Your trash-talk résumé 📜</h1>
+      <h1 className="h1">{t.profile_heading}</h1>
 
       <div className="card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <b style={{ fontSize: 20 }}>Level {level}</b>
-          <span className="sub">{progress.xp} XP · {toNext} to next</span>
+          <span className="sub">{progress.xp} XP · {t.profile_xp_to_next(toNext)}</span>
         </div>
         <div className="xpbar" style={{ marginTop: 8 }}><div style={{ width: `${pct}%` }} /></div>
       </div>
 
       <div className="statbox">
-        <div className="card"><div className="val">{lessons}</div><div className="sub">lessons</div></div>
-        <div className="card"><div className="val">{progress.perfectCount}</div><div className="sub">perfects</div></div>
-        <div className="card"><div className="val">{progress.languagesTried.length}</div><div className="sub">languages</div></div>
+        <div className="card"><div className="val">{lessons}</div><div className="sub">{t.profile_lessons}</div></div>
+        <div className="card"><div className="val">{progress.perfectCount}</div><div className="sub">{t.profile_perfects}</div></div>
+        <div className="card"><div className="val">{progress.languagesTried.length}</div><div className="sub">{t.profile_languages}</div></div>
       </div>
 
-      <h2 className="h2">Active language</h2>
+      <h2 className="h2">{t.profile_active_lang}</h2>
       <div className="card">
         <p className="sub" style={{ marginBottom: 10 }}>
-          Currently learning: <strong>{currentLang ? `${currentLang.flag} ${currentLang.name}` : '—'}</strong>
+          {t.profile_active_lang_sub(currentLang ? `${currentLang.flag} ${currentLang.name}` : '—')}
         </p>
         <div className="lang-switcher">
           {LANGUAGES.map((l) => (
@@ -43,7 +44,7 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
         </div>
       </div>
 
-      <h2 className="h2">Badges</h2>
+      <h2 className="h2">{t.profile_badges}</h2>
       <div className="badge-grid">
         {BADGES.map((b) => (
           <div key={b.id} className={`badge ${progress.badges.includes(b.id) ? 'earned' : ''}`}>
@@ -53,10 +54,10 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
         ))}
       </div>
 
-      <h2 className="h2">Languages tried</h2>
+      <h2 className="h2">{t.profile_langs_tried}</h2>
       <div className="card">
         {progress.languagesTried.length === 0
-          ? <span className="sub">None yet. Go offend a dictionary.</span>
+          ? <span className="sub">{t.profile_no_langs}</span>
           : progress.languagesTried.map((code) => {
               const l = LANGUAGES.find((x) => x.code === code)
               return l ? <span key={code} style={{ fontSize: 28, marginRight: 8 }} title={l.name}>{l.flag}</span> : null

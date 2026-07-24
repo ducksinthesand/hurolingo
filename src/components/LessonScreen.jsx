@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { buildExercises } from '../lib/lessons.js'
 import { entriesForVariant } from '../data/index.js'
+import { t } from '../i18n/index.js'
 
 export default function LessonScreen({ session, onFinish, onQuit }) {
   const { lang, variant, lesson } = session
@@ -19,7 +20,7 @@ export default function LessonScreen({ session, onFinish, onQuit }) {
     const c = correct + (wasCorrect ? 1 : 0)
     const w = wrong + (wasCorrect ? 0 : 1) + mistakes
     if (index + 1 >= exercises.length) {
-      onFinish({ correct: c + (wasCorrect ? 0 : 0), total: exercises.length, wrong: w })
+      onFinish({ correct: c, total: exercises.length, wrong: w })
     } else {
       setCorrect(c); setWrong(w); setIndex(index + 1)
     }
@@ -27,7 +28,7 @@ export default function LessonScreen({ session, onFinish, onQuit }) {
 
   return (
     <div>
-      <button className="backlink" onClick={onQuit}>✕ Quit lesson</button>
+      <button className="backlink" onClick={onQuit}>{t.quit_lesson}</button>
       <div className="progressbar"><div style={{ width: `${pct}%` }} /></div>
       {ex.type === 'pairs'
         ? <PairsExercise key={index} exercise={ex} onDone={next} />
@@ -40,9 +41,14 @@ function ChoiceExercise({ exercise, onDone }) {
   const [picked, setPicked] = useState(null)
   const isCorrect = picked !== null && picked === exercise.answer
 
+  // Translate the built-in prompts from lessons.js into German
+  const promptLabel = exercise.prompt === 'What does this mean?' ? t.prompt_meaning
+    : exercise.prompt === 'How do you say this?' ? t.prompt_say
+    : t.prompt_blank
+
   return (
     <div>
-      <p className="sub">{exercise.prompt}</p>
+      <p className="sub">{promptLabel}</p>
       <div className="prompt-word">{exercise.question}</div>
       {exercise.hint && <div className="phonetic">{exercise.hint}</div>}
       <div className="choices">
@@ -58,16 +64,16 @@ function ChoiceExercise({ exercise, onDone }) {
       {picked !== null && (
         <>
           <div className={`feedback ${isCorrect ? 'good' : 'bad'}`}>
-            {isCorrect ? 'Nice one! 🎉' : `Oof. It's "${exercise.answer}".`}
+            {isCorrect ? t.feedback_correct : t.feedback_wrong(exercise.answer)}
             <span className="note">
               <b>{exercise.entry.original}</b> — {exercise.entry.translation}
               {exercise.entry.literal && exercise.entry.literal !== exercise.entry.translation &&
-                <> (literally: {exercise.entry.literal})</>}
+                <> ({t.feedback_literally} {exercise.entry.literal})</>}
               <br />{exercise.entry.note}
             </span>
           </div>
           <button className="btn green" style={{ marginTop: 12 }} onClick={() => onDone(isCorrect)}>
-            Continue
+            {t.btn_continue}
           </button>
         </>
       )}
@@ -87,9 +93,6 @@ function PairsExercise({ exercise, onDone }) {
   const [mistakes, setMistakes] = useState(0)
 
   function tap(card) {
-    if (matched.includes(card.id) && matched.filter((m) => m === card.id).length >= 1) {
-      // allow tapping matched? no-op below via disabled
-    }
     if (!selected) { setSelected(card); return }
     if (selected.side === card.side) { setSelected(card); return }
     if (selected.id === card.id) {
@@ -108,7 +111,7 @@ function PairsExercise({ exercise, onDone }) {
 
   return (
     <div>
-      <p className="sub">Match the pairs</p>
+      <p className="sub">{t.prompt_pairs}</p>
       <div className="pairs-grid">
         {cards.map((card, i) => (
           <button key={i}

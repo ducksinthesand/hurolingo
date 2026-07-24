@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { ADSENSE_CLIENT, ADSENSE_SLOT_BANNER, ADSENSE_SLOT_INTERSTITIAL } from '../config.js'
+import { t } from '../i18n/index.js'
 
 /*
   Ad slot component.
@@ -19,9 +20,10 @@ export default function AdSlot({ kind = 'banner' }) {
   }, [live])
 
   if (!live) {
+    const label = kind === 'interstitial' ? t.ad_interstitial_label : t.ad_banner_label
     return (
       <div className={`ad-slot ad-${kind}`}>
-        AD SLOT ({kind})<br />configure AdSense in src/config.js
+        {label}<br />{t.ad_configure}
       </div>
     )
   }

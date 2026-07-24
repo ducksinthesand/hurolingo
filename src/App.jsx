@@ -2,18 +2,18 @@ import { useState } from 'react'
 import { APP_NAME, XP_PER_CORRECT, XP_PERFECT_BONUS } from './config.js'
 import { loadProgress, saveProgress, evaluateBadges, levelProgress, BADGES } from './lib/store.js'
 import { lessonKey } from './lib/lessons.js'
-import { getLanguage } from './data/index.js'
 import LanguagePicker from './components/LanguagePicker.jsx'
 import PathScreen from './components/PathScreen.jsx'
 import LessonScreen from './components/LessonScreen.jsx'
 import ResultsScreen from './components/ResultsScreen.jsx'
 import ProfileScreen from './components/ProfileScreen.jsx'
+import { t } from './i18n/index.js'
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress)
-  const [view, setView] = useState('path')            // default to path (German)
-  const [lang, setLang] = useState(() => getLanguage('de'))  // German default
-  const [session, setSession] = useState(null)        // { lang, variant, unit, lessonIndex, lesson, key }
+  const [view, setView] = useState('home')   // home | path | lesson | results | profile
+  const [lang, setLang] = useState(null)
+  const [session, setSession] = useState(null)
   const [lastResult, setLastResult] = useState(null)
 
   function update(p) { setProgress(p); saveProgress(p) }
@@ -32,7 +32,6 @@ export default function App() {
     if (!p.languagesTried.includes(session.lang.code)) {
       p.languagesTried = [...p.languagesTried, session.lang.code]
     }
-    // category complete?
     const allDone = session.unit.lessons.every((_, i) =>
       p.lessonsDone[lessonKey(session.lang.code, session.variant, session.unit.category.id, i)])
     const catKey = `${session.lang.code}|${session.variant}|${session.unit.category.id}`
@@ -92,14 +91,14 @@ export default function App() {
       {view !== 'lesson' && view !== 'results' && (
         <nav className="bottomnav">
           <button className={`navbtn ${view === 'home' ? 'active' : ''}`} onClick={() => setView('home')}>
-            🌍<span>Languages</span>
+            🌍<span>{t.nav_languages}</span>
           </button>
           <button className={`navbtn ${view === 'path' ? 'active' : ''}`}
             onClick={() => lang && setView('path')} disabled={!lang}>
-            🗺️<span>Path</span>
+            🗺️<span>{t.nav_path}</span>
           </button>
           <button className={`navbtn ${view === 'profile' ? 'active' : ''}`} onClick={() => setView('profile')}>
-            🏅<span>Profile</span>
+            🏅<span>{t.nav_profile}</span>
           </button>
         </nav>
       )}

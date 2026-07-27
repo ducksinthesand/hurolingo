@@ -13,7 +13,7 @@ function langDisplayName(lang) {
   return key && t[key] ? t[key] : lang.name
 }
 
-export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
+export default function ProfileScreen({ progress, currentLang, onChangeLang, onImpressum }) {
   const { level, pct, toNext } = levelProgress(progress.xp)
   const lessons = Object.keys(progress.lessonsDone).length
 

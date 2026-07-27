@@ -2,16 +2,18 @@ import { useState } from 'react'
 import { APP_NAME, XP_PER_CORRECT, XP_PERFECT_BONUS } from './config.js'
 import { loadProgress, saveProgress, evaluateBadges, levelProgress, BADGES } from './lib/store.js'
 import { lessonKey } from './lib/lessons.js'
+import { getLanguage } from './data/index.js'
 import LanguagePicker from './components/LanguagePicker.jsx'
 import PathScreen from './components/PathScreen.jsx'
 import LessonScreen from './components/LessonScreen.jsx'
 import ResultsScreen from './components/ResultsScreen.jsx'
 import ProfileScreen from './components/ProfileScreen.jsx'
+import ImpressumScreen from './components/ImpressumScreen.jsx'
 import { t } from './i18n/index.js'
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress)
-  const [view, setView] = useState('home')   // home | path | lesson | results | profile
+  const [view, setView] = useState('home')   // home | path | lesson | results | profile | impressum
   const [lang, setLang] = useState(null)
   const [session, setSession] = useState(null)
   const [lastResult, setLastResult] = useState(null)
@@ -46,10 +48,12 @@ export default function App() {
   }
 
   const { level } = levelProgress(progress.xp)
+  const showNav = view !== 'lesson' && view !== 'results' && view !== 'impressum'
+  const showTopbar = view !== 'lesson' && view !== 'impressum'
 
   return (
     <div className="app">
-      {view !== 'lesson' && (
+      {showTopbar && (
         <div className="topbar">
           <span className="logo">{APP_NAME}</span>
           <div className="pills">
@@ -60,7 +64,12 @@ export default function App() {
       )}
 
       {view === 'home' && (
-        <LanguagePicker onPick={pickLanguage} />
+        <>
+          <LanguagePicker onPick={pickLanguage} />
+          <div className="legal-footer">
+            <button onClick={() => setView('impressum')}>Impressum &amp; Datenschutz</button>
+          </div>
+        </>
       )}
 
       {view === 'path' && lang && (
@@ -85,10 +94,15 @@ export default function App() {
           progress={progress}
           currentLang={lang}
           onChangeLang={pickLanguage}
+          onImpressum={() => setView('impressum')}
         />
       )}
 
-      {view !== 'lesson' && view !== 'results' && (
+      {view === 'impressum' && (
+        <ImpressumScreen onBack={() => setView('home')} />
+      )}
+
+      {showNav && (
         <nav className="bottomnav">
           <button className={`navbtn ${view === 'home' ? 'active' : ''}`} onClick={() => setView('home')}>
             🌍<span>{t.nav_languages}</span>

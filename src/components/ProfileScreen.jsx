@@ -79,6 +79,10 @@ export default function ProfileScreen({ progress, currentLang, onChangeLang }) {
       </div>
 
       <AdSlot kind="banner" />
+
+      <div className="legal-footer">
+        <button onClick={onImpressum}>Impressum &amp; Datenschutz</button>
+      </div>
     </div>
   )
 }
